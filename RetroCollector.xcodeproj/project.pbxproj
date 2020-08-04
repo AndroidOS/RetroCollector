@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D67F608E1AAD78D9A593D27 /* Pods_RetroCollectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375F9BEBABF432BC5F47BA3B /* Pods_RetroCollectorTests.framework */; };
+		826CB6BF733F09F24B8CA0E8 /* Pods_RetroCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */; };
+		BE769C5B24DA090200DA811A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE769C5A24DA090200DA811A /* GoogleService-Info.plist */; };
 		BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */; };
 		BE7AE3F524D8A6D800D357A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */; };
 		BE7AE3F724D8A6D800D357A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F624D8A6D800D357A9 /* ViewController.swift */; };
@@ -28,6 +31,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		375F9BEBABF432BC5F47BA3B /* Pods_RetroCollectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetroCollectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5A2E5C357006064BFCDB48 /* Pods-RetroCollectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollectorTests.debug.xcconfig"; path = "Target Support Files/Pods-RetroCollectorTests/Pods-RetroCollectorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetroCollector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E4E4E9B7F61BC2C9310EF5F /* Pods-RetroCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollector.release.xcconfig"; path = "Target Support Files/Pods-RetroCollector/Pods-RetroCollector.release.xcconfig"; sourceTree = "<group>"; };
+		943117BC0BFB70278E070960 /* Pods-RetroCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollector.debug.xcconfig"; path = "Target Support Files/Pods-RetroCollector/Pods-RetroCollector.debug.xcconfig"; sourceTree = "<group>"; };
+		BE769C5A24DA090200DA811A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE7AE3EF24D8A6D800D357A9 /* RetroCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +49,7 @@
 		BE7AE40824D8A6DB00D357A9 /* RetroCollectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroCollectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7AE40C24D8A6DB00D357A9 /* RetroCollectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroCollectorTests.swift; sourceTree = "<group>"; };
 		BE7AE40E24D8A6DB00D357A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CA6BBFFBC45866A129B5A3 /* Pods-RetroCollectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollectorTests.release.xcconfig"; path = "Target Support Files/Pods-RetroCollectorTests/Pods-RetroCollectorTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				826CB6BF733F09F24B8CA0E8 /* Pods_RetroCollector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +65,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D67F608E1AAD78D9A593D27 /* Pods_RetroCollectorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		551EB432D4129FDD7C670577 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */,
+				375F9BEBABF432BC5F47BA3B /* Pods_RetroCollectorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64D1879E2F2E82C6EC988B39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				943117BC0BFB70278E070960 /* Pods-RetroCollector.debug.xcconfig */,
+				8E4E4E9B7F61BC2C9310EF5F /* Pods-RetroCollector.release.xcconfig */,
+				3E5A2E5C357006064BFCDB48 /* Pods-RetroCollectorTests.debug.xcconfig */,
+				F4CA6BBFFBC45866A129B5A3 /* Pods-RetroCollectorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE7AE3E624D8A6D800D357A9 = {
 			isa = PBXGroup;
 			children = (
 				BE7AE3F124D8A6D800D357A9 /* RetroCollector */,
 				BE7AE40B24D8A6DB00D357A9 /* RetroCollectorTests */,
 				BE7AE3F024D8A6D800D357A9 /* Products */,
+				64D1879E2F2E82C6EC988B39 /* Pods */,
+				551EB432D4129FDD7C670577 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +115,7 @@
 		BE7AE3F124D8A6D800D357A9 /* RetroCollector */ = {
 			isa = PBXGroup;
 			children = (
+				BE769C5A24DA090200DA811A /* GoogleService-Info.plist */,
 				BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */,
 				BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */,
 				BE7AE3F624D8A6D800D357A9 /* ViewController.swift */,
@@ -109,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE7AE41124D8A6DB00D357A9 /* Build configuration list for PBXNativeTarget "RetroCollector" */;
 			buildPhases = (
+				BC5E2D0294898699BD4B936F /* [CP] Check Pods Manifest.lock */,
 				BE7AE3EB24D8A6D800D357A9 /* Sources */,
 				BE7AE3EC24D8A6D800D357A9 /* Frameworks */,
 				BE7AE3ED24D8A6D800D357A9 /* Resources */,
+				CF5CBB8B86375081AEDA2862 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE7AE41424D8A6DB00D357A9 /* Build configuration list for PBXNativeTarget "RetroCollectorTests" */;
 			buildPhases = (
+				A82C68F3C97B4F9C4211AF7E /* [CP] Check Pods Manifest.lock */,
 				BE7AE40424D8A6DB00D357A9 /* Sources */,
 				BE7AE40524D8A6DB00D357A9 /* Frameworks */,
 				BE7AE40624D8A6DB00D357A9 /* Resources */,
@@ -184,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7AE40224D8A6DB00D357A9 /* LaunchScreen.storyboard in Resources */,
+				BE769C5B24DA090200DA811A /* GoogleService-Info.plist in Resources */,
 				BE7AE3FF24D8A6DB00D357A9 /* Assets.xcassets in Resources */,
 				BE7AE3FA24D8A6D800D357A9 /* Main.storyboard in Resources */,
 			);
@@ -197,6 +236,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A82C68F3C97B4F9C4211AF7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetroCollectorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC5E2D0294898699BD4B936F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetroCollector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF5CBB8B86375081AEDA2862 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetroCollector/Pods-RetroCollector-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetroCollector/Pods-RetroCollector-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetroCollector/Pods-RetroCollector-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE7AE3EB24D8A6D800D357A9 /* Sources */ = {
@@ -285,7 +388,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -345,6 +448,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -364,6 +468,7 @@
 		};
 		BE7AE41224D8A6DB00D357A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943117BC0BFB70278E070960 /* Pods-RetroCollector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +487,7 @@
 		};
 		BE7AE41324D8A6DB00D357A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E4E4E9B7F61BC2C9310EF5F /* Pods-RetroCollector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +506,7 @@
 		};
 		BE7AE41524D8A6DB00D357A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E5A2E5C357006064BFCDB48 /* Pods-RetroCollectorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -422,6 +529,7 @@
 		};
 		BE7AE41624D8A6DB00D357A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4CA6BBFFBC45866A129B5A3 /* Pods-RetroCollectorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

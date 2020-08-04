@@ -1,0 +1,6 @@
+framework module Pods_RetroCollectorTests {
+  umbrella header "Pods-RetroCollectorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
