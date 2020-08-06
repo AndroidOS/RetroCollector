@@ -11,13 +11,16 @@ import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var lblError: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        //Auth.auth().createUser(withEmail: "tom@gmail.com", password: "123456"){
         Auth.auth().createUser(withEmail: "lizz@gmail.com", password: "123456"){ authResult, error in
             if (error != nil){
+                self.lblError.text = "\(error!)"
                 print(error!)
             } else {
                 print(authResult!)
@@ -27,4 +30,6 @@ class ViewController: UIViewController {
 
 }
 
+    @IBAction func btnLogin(_ sender: UIButton) {
+    }
 }

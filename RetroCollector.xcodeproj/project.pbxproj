@@ -18,6 +18,7 @@
 		BE7AE3FF24D8A6DB00D357A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE7AE3FE24D8A6DB00D357A9 /* Assets.xcassets */; };
 		BE7AE40224D8A6DB00D357A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7AE40024D8A6DB00D357A9 /* LaunchScreen.storyboard */; };
 		BE7AE40D24D8A6DB00D357A9 /* RetroCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE40C24D8A6DB00D357A9 /* RetroCollectorTests.swift */; };
+		BE7C0BFE24DB5FC8004F1144 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C0BFD24DB5FC8004F1144 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BE7AE40824D8A6DB00D357A9 /* RetroCollectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroCollectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7AE40C24D8A6DB00D357A9 /* RetroCollectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroCollectorTests.swift; sourceTree = "<group>"; };
 		BE7AE40E24D8A6DB00D357A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE7C0BFD24DB5FC8004F1144 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F4CA6BBFFBC45866A129B5A3 /* Pods-RetroCollectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollectorTests.release.xcconfig"; path = "Target Support Files/Pods-RetroCollectorTests/Pods-RetroCollectorTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 				BE7AE40024D8A6DB00D357A9 /* LaunchScreen.storyboard */,
 				BE7AE40324D8A6DB00D357A9 /* Info.plist */,
 				BE7AE3FB24D8A6D800D357A9 /* RetroCollector.xcdatamodeld */,
+				BE7C0BFD24DB5FC8004F1144 /* ListViewController.swift */,
 			);
 			path = RetroCollector;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				BE7AE3F724D8A6D800D357A9 /* ViewController.swift in Sources */,
 				BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */,
 				BE7AE3FD24D8A6D800D357A9 /* RetroCollector.xcdatamodeld in Sources */,
+				BE7C0BFE24DB5FC8004F1144 /* ListViewController.swift in Sources */,
 				BE7AE3F524D8A6D800D357A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
