@@ -10,16 +10,10 @@ import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource  {
     
+    let streets = ["Albemarle", "Brandywine", "Chesapeake"]
     
     @IBOutlet weak var tableView: UITableView!
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
     
 
     override func viewDidLoad() {
@@ -28,15 +22,16 @@ class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDat
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return streets.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RetroTableViewCell
+        cell.textLabel?.text = self.streets[indexPath.row]
+        print("cellForRowAtIndexPath")
+        return cell
+    }
+    
 
 }
