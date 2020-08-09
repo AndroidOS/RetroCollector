@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource  {
     
-    let streets = ["Albemarle", "Brandywine", "Chesapeake"]
+    let db = Firestore.firestore()
+    
+    var parts = [Part]()
+    
+    var parts2 = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,17 +23,27 @@ class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        db.collection("manufacturers").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    self.parts2.append("\(document.data()["man"]!)")
+                }
+            }
+            self.tableView.reloadData()
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return streets.count
+        return parts2.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RetroTableViewCell
-        cell.textLabel?.text = self.streets[indexPath.row]
+        cell.textLabel?.text = self.parts2[indexPath.row]
         print("cellForRowAtIndexPath")
         return cell
     }

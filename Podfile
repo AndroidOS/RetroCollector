@@ -7,6 +7,7 @@ target 'RetroCollector' do
   
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+	
 
   target 'RetroCollectorTests' do
     inherit! :search_paths
