@@ -145,6 +145,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="2qX-bO-qa3">
                             <connections>
                                 <action selector="btnLogout:" destination="s5g-X4-jLX" id="Tw2-ZM-0bF"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="w2a-qq-t1e"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -176,4 +177,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="w2a-qq-t1e"/>
+    </inferredMetricsTieBreakers>
 </document>

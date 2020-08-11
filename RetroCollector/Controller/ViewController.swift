@@ -18,16 +18,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        performSegue(withIdentifier: "toList", sender: nil)
+        //performSegue(withIdentifier: "toList", sender: nil)
         
-//        Auth.auth().createUser(withEmail: "lizz@gmail.com", password: "123456"){ authResult, error in
-//            if (error != nil){
-//                self.lblError.text = "\(error!)"
-//                print(error!)
-//            } else {
-//                print(authResult!)
-//            }
-//        }
+
 
 
 }

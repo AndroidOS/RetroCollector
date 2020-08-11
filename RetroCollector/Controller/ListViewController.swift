@@ -51,4 +51,19 @@ class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDat
 
     @IBAction func btnLogout(_ sender: UIBarButtonItem) {
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "logout") {
+            
+           print("Logout Segue")
+            
+            do {
+                try Auth.auth().signOut()
+            } catch is Error {
+                print("Logout Error")
+            }
+            
+        }
+        
+    }
 }
