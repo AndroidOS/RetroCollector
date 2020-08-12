@@ -9,7 +9,11 @@
 import UIKit
 import Firebase
 
-class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDataSource  {
+class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataManagerDelegate, UITableViewDataSource   {
+    
+    
+    
+    var dataManager = FirebaseDataManager()
     
     let db = Firestore.firestore()
     
@@ -23,18 +27,9 @@ class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        db.collection("manufacturers").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    self.parts2.append("\(document.data()["man"]!)")
-                }
-            }
-            self.tableView.reloadData()
-        }
         
+        dataManager.delegate = self
+        dataManager.fetchFirebaseData()    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,5 +60,10 @@ class ListViewController: UIViewController, UITableViewDelegate,  UITableViewDat
             
         }
         
+    }
+    
+    func didUpdateList(manu: [String]) {
+        parts2 = manu
+        self.tableView.reloadData()
     }
 }

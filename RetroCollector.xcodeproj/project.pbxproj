@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D67F608E1AAD78D9A593D27 /* Pods_RetroCollectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375F9BEBABF432BC5F47BA3B /* Pods_RetroCollectorTests.framework */; };
 		826CB6BF733F09F24B8CA0E8 /* Pods_RetroCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */; };
+		BE7206AF24E49CF5009B8B33 /* FirebaseDataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7206AE24E49CF5009B8B33 /* FirebaseDataMgr.swift */; };
 		BE769C5B24DA090200DA811A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE769C5A24DA090200DA811A /* GoogleService-Info.plist */; };
 		BE770ECD24E09FED0050DAE0 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE770ECC24E09FED0050DAE0 /* Part.swift */; };
 		BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */; };
@@ -39,6 +40,8 @@
 		4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetroCollector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4E4E9B7F61BC2C9310EF5F /* Pods-RetroCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollector.release.xcconfig"; path = "Target Support Files/Pods-RetroCollector/Pods-RetroCollector.release.xcconfig"; sourceTree = "<group>"; };
 		943117BC0BFB70278E070960 /* Pods-RetroCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollector.debug.xcconfig"; path = "Target Support Files/Pods-RetroCollector/Pods-RetroCollector.debug.xcconfig"; sourceTree = "<group>"; };
+		BE7206AE24E49CF5009B8B33 /* FirebaseDataMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataMgr.swift; sourceTree = "<group>"; };
+		BE7206B024E49D3B009B8B33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Utils/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE769C5A24DA090200DA811A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE770ECC24E09FED0050DAE0 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		BE7AE3EF24D8A6D800D357A9 /* RetroCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +104,9 @@
 		BE770ECE24E0A14D0050DAE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE7AE3FB24D8A6D800D357A9 /* RetroCollector.xcdatamodeld */,
 				BE770ECC24E09FED0050DAE0 /* Part.swift */,
+				BE7206AE24E49CF5009B8B33 /* FirebaseDataMgr.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 		BE770ECF24E0A17F0050DAE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE7AE3FE24D8A6DB00D357A9 /* Assets.xcassets */,
 				BE7AE3F824D8A6D800D357A9 /* Main.storyboard */,
 				BE7AE40024D8A6DB00D357A9 /* LaunchScreen.storyboard */,
 			);
@@ -128,6 +134,8 @@
 		BE770ED124E0A1CD0050DAE0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */,
+				BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -155,16 +163,13 @@
 		BE7AE3F124D8A6D800D357A9 /* RetroCollector */ = {
 			isa = PBXGroup;
 			children = (
+				BE7206B024E49D3B009B8B33 /* GoogleService-Info.plist */,
+				BE7AE40324D8A6DB00D357A9 /* Info.plist */,
 				BE770ED124E0A1CD0050DAE0 /* Utils */,
 				BE770ED024E0A19C0050DAE0 /* Controller */,
 				BE770ECF24E0A17F0050DAE0 /* View */,
 				BE770ECE24E0A14D0050DAE0 /* Model */,
 				BE769C5A24DA090200DA811A /* GoogleService-Info.plist */,
-				BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */,
-				BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */,
-				BE7AE3FE24D8A6DB00D357A9 /* Assets.xcassets */,
-				BE7AE40324D8A6DB00D357A9 /* Info.plist */,
-				BE7AE3FB24D8A6D800D357A9 /* RetroCollector.xcdatamodeld */,
 			);
 			path = RetroCollector;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7AE3F724D8A6D800D357A9 /* ViewController.swift in Sources */,
+				BE7206AF24E49CF5009B8B33 /* FirebaseDataMgr.swift in Sources */,
 				BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */,
 				BE770ECD24E09FED0050DAE0 /* Part.swift in Sources */,
 				BE7DD28E24DDF4B5005A511F /* RetroTableViewCell.swift in Sources */,
