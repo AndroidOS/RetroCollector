@@ -148,6 +148,11 @@
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="w2a-qq-t1e"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="XQR-Np-pGE">
+                            <connections>
+                                <action selector="btnShare:" destination="s5g-X4-jLX" id="E3P-6C-bhb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
@@ -180,4 +185,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="w2a-qq-t1e"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
 </document>

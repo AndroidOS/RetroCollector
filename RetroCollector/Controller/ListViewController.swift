@@ -44,6 +44,9 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     }
     
 
+    @IBAction func btnShare(_ sender: UIBarButtonItem) {
+        print("Share button pressed")
+    }
     @IBAction func btnLogout(_ sender: UIBarButtonItem) {
     }
     
