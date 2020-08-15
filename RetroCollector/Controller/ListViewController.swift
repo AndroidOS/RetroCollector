@@ -21,6 +21,11 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     
     var parts2 = [String]()
     
+    @IBOutlet weak var lblHeading: UILabel!
+    
+    @IBOutlet weak var lblText: UILabel!
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -29,7 +34,11 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
         super.viewDidLoad()
         
         dataManager.delegate = self
-        dataManager.fetchFirebaseData()    
+        dataManager.fetchFirebaseData()
+        
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 600
+        tableView.rowHeight = 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +47,8 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RetroTableViewCell
-        cell.textLabel?.text = self.parts2[indexPath.row]
+       // cell.textLabel?.text = self.parts2[indexPath.row]
+        cell.lblHeading?.text = self.parts2[indexPath.row]
         print("cellForRowAtIndexPath")
         return cell
     }
@@ -51,18 +61,16 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
             text.append(contentsOf: "\(s)\n")
         }
         
-        //let text = "This is some text that I want to share."
-
-               // set up activity view controller
-               let textToShare = [ text ]
-               let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-               activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        // set up activity view controller
+        let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
 //
 //               // exclude some activity types from the list (optional)
 //        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
 
-               // present the view controller
-               self.present(activityViewController, animated: true, completion: nil)
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     
@@ -76,7 +84,7 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
             
             do {
                 try Auth.auth().signOut()
-            } catch is Error {
+            } catch  {
                 print("Logout Error")
             }
             

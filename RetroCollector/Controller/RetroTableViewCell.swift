@@ -9,7 +9,15 @@
 import UIKit
 
 class RetroTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var lblHeading: UILabel!
+    
+    
+    @IBOutlet weak var lblText: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
