@@ -39,6 +39,8 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
 //        tableView.rowHeight = UITableView.automaticDimension
 //        tableView.estimatedRowHeight = 600
         tableView.rowHeight = 100
+        
+        queryParts()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +51,7 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RetroTableViewCell
        // cell.textLabel?.text = self.parts2[indexPath.row]
         cell.lblHeading?.text = self.parts2[indexPath.row]
-        print("cellForRowAtIndexPath")
+        //print("cellForRowAtIndexPath")
         return cell
     }
     
@@ -95,5 +97,23 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     func didUpdateList(manu: [String]) {
         parts2 = manu
         self.tableView.reloadData()
+    }
+    
+    func queryParts(){
+        // Create a reference to the cities collection
+        let cartsRef = db.collection("carts")
+
+        // Create a query against the collection.
+        let query: Void = cartsRef.whereField("manufacturer", isEqualTo: "Commodore").getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                    }
+                }
+        }
+        
+        //print("\(query)")
     }
 }
