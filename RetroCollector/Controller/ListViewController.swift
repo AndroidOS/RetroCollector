@@ -50,7 +50,8 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RetroTableViewCell
        // cell.textLabel?.text = self.parts2[indexPath.row]
-        cell.lblHeading?.text = self.parts2[indexPath.row]
+        cell.lblHeading?.text = self.parts[indexPath.row].catridge
+        cell.lblText?.text = self.parts[indexPath.row].partNum
         //print("cellForRowAtIndexPath")
         return cell
     }
@@ -102,6 +103,9 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     func queryParts(){
         // Create a reference to the cities collection
         let cartsRef = db.collection("carts")
+        
+       // var count = ""
+        
 
         // Create a query against the collection.
         let query: Void = cartsRef.whereField("manufacturer", isEqualTo: "Commodore").getDocuments() { (querySnapshot, err) in
@@ -109,7 +113,48 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
                     print("Error getting documents: \(err)")
                 } else {
                     for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
+                       if let cart = document.data()["catridge"] as? String {
+                            
+                                if let computer = document.data()["computer"] as? String {
+                                    if let condition = document.data()["condition"] as? String {
+                                        if let gamePlay = document.data()["gamePlay"] as? String {
+                                            if let manu = document.data()["manufacturer"] as? String {
+                                                if let partNum = document.data()["partNum"] as? String {
+                                                    if let rarity = document.data()["rarity"] as? String {
+                                                        if let romUse = document.data()["romUse"] as? String {
+                                                            if let yearMade = document.data()["yearMade"] as? String {
+                                                                
+                                                                let newPart = Part(catridge: cart, computer: computer, condition: condition, gamePlay: gamePlay, manufacturer: manu, partNum: partNum, rarity: rarity, romUse: romUse, yearMade: yearMade)
+                                                                
+                                                                self.parts.append(newPart)
+                                                            }
+                                                        
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                       
+                         //self.lblText.text = "\(cart)"
+                       
+//                        if let cart = document.data()["catridge"] as? String {
+//
+//                        } else {
+//
+//                        }
+                        
                     }
                 }
         }

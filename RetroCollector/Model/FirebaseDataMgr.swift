@@ -33,7 +33,7 @@ func performRequest(){
             print("Error getting documents: \(err)")
         } else {
             for document in querySnapshot!.documents {
-                print("\(document.documentID) => \(document.data())")
+                //print("\(document.documentID) => \(document.data())")
                 parts.append("\(document.data()["man"]!)")
             }
         }
