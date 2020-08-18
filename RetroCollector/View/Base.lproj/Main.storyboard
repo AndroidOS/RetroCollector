@@ -179,11 +179,28 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="9Sr-DS-SnF" id="qmx-Zc-6ew"/>
+                        <segue destination="oB8-mg-SaC" kind="show" identifier="showDetail" id="WxE-pm-MKI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1R-4V-tul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2028.985507246377" y="114.50892857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jUg-jO-LuZ">
+            <objects>
+                <viewController id="oB8-mg-SaC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbN-zJ-VTk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="08f-tB-FS5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pmN-PZ-5UL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhL-DZ-18c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FiK-Jr-6s5">

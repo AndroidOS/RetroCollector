@@ -56,6 +56,10 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     performSegue(withIdentifier: "showDetail", sender: nil)
+    }
+    
 
     @IBAction func btnShare(_ sender: UIBarButtonItem) {
         var text = ""
