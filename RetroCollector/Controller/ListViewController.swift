@@ -21,6 +21,8 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     
     var parts2 = [String]()
     
+    var detailPart:Part? = nil
+    
     @IBOutlet weak var lblHeading: UILabel!
     
     @IBOutlet weak var lblText: UILabel!
@@ -57,6 +59,7 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        detailPart = parts[indexPath.row]
      performSegue(withIdentifier: "showDetail", sender: nil)
     }
     
@@ -96,6 +99,17 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
             }
             
         }
+        if (segue.identifier == "showDetail") {
+            
+           print("showDetail Segue")
+            
+            if let detailViewController = segue.destination as? DetailViewController {
+                detailViewController.detailPart = detailPart
+                   }
+            
+        }
+        
+        
         
     }
     
@@ -142,27 +156,13 @@ class ListViewController: UIViewController, UITableViewDelegate, FirebaseDataMan
                             }
                         }
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                       
-                         //self.lblText.text = "\(cart)"
-                       
-//                        if let cart = document.data()["catridge"] as? String {
-//
-//                        } else {
-//
-//                        }
-                        
+                  
                     }
                 }
         }
         
         //print("\(query)")
     }
+    
+    
 }

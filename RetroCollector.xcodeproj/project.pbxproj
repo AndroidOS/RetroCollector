@@ -12,6 +12,7 @@
 		BE7206AF24E49CF5009B8B33 /* FirebaseDataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7206AE24E49CF5009B8B33 /* FirebaseDataMgr.swift */; };
 		BE769C5B24DA090200DA811A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE769C5A24DA090200DA811A /* GoogleService-Info.plist */; };
 		BE770ECD24E09FED0050DAE0 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE770ECC24E09FED0050DAE0 /* Part.swift */; };
+		BE77B8C924EDD68E00D00D8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77B8C824EDD68E00D00D8F /* DetailViewController.swift */; };
 		BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */; };
 		BE7AE3F524D8A6D800D357A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */; };
 		BE7AE3F724D8A6D800D357A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7AE3F624D8A6D800D357A9 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		BE7206B024E49D3B009B8B33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Utils/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE769C5A24DA090200DA811A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE770ECC24E09FED0050DAE0 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		BE77B8C824EDD68E00D00D8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BE7AE3EF24D8A6D800D357A9 /* RetroCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7AE3F224D8A6D800D357A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7AE3F424D8A6D800D357A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				BE7AE3F624D8A6D800D357A9 /* ViewController.swift */,
 				BE7C0BFD24DB5FC8004F1144 /* ListViewController.swift */,
 				BE7DD28D24DDF4B5005A511F /* RetroTableViewCell.swift */,
+				BE77B8C824EDD68E00D00D8F /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE77B8C924EDD68E00D00D8F /* DetailViewController.swift in Sources */,
 				BE7AE3F724D8A6D800D357A9 /* ViewController.swift in Sources */,
 				BE7206AF24E49CF5009B8B33 /* FirebaseDataMgr.swift in Sources */,
 				BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */,

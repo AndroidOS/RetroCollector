@@ -186,21 +186,37 @@
             </objects>
             <point key="canvasLocation" x="2028.985507246377" y="114.50892857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="jUg-jO-LuZ">
             <objects>
-                <viewController id="oB8-mg-SaC" sceneMemberID="viewController">
+                <viewController id="oB8-mg-SaC" customClass="DetailViewController" customModule="RetroCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sbN-zJ-VTk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR3-Rz-7uU">
+                                <rect key="frame" x="20" y="171" width="374" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oR3-Rz-7uU" firstAttribute="leading" secondItem="08f-tB-FS5" secondAttribute="leading" constant="20" id="JPd-9L-l2D"/>
+                            <constraint firstItem="oR3-Rz-7uU" firstAttribute="top" secondItem="08f-tB-FS5" secondAttribute="top" constant="83" id="Tvl-hE-Vew"/>
+                            <constraint firstItem="08f-tB-FS5" firstAttribute="trailing" secondItem="oR3-Rz-7uU" secondAttribute="trailing" constant="20" id="WDG-RW-wWj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="08f-tB-FS5"/>
                     </view>
                     <navigationItem key="navigationItem" id="pmN-PZ-5UL"/>
+                    <connections>
+                        <outlet property="lblHeading" destination="oR3-Rz-7uU" id="fyr-0w-6yn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhL-DZ-18c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2892" y="121"/>
+            <point key="canvasLocation" x="2889.8550724637685" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FiK-Jr-6s5">
