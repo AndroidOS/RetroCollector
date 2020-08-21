@@ -290,7 +290,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="pmN-PZ-5UL"/>
                     <connections>
+                        <outlet property="lblComputer" destination="WsJ-lX-d3V" id="QQ2-HP-Gnh"/>
                         <outlet property="lblHeading" destination="oR3-Rz-7uU" id="fyr-0w-6yn"/>
+                        <outlet property="lblPartNum" destination="bS5-Nn-aJV" id="f3F-Fj-a44"/>
+                        <outlet property="lblRarity" destination="0zo-ob-dHV" id="Hf8-SV-dXD"/>
+                        <outlet property="lblRomUse" destination="H8A-lz-3Qx" id="zHc-3u-rwa"/>
+                        <outlet property="lblYearMade" destination="8wb-tW-cle" id="IHJ-uS-8cl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhL-DZ-18c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
