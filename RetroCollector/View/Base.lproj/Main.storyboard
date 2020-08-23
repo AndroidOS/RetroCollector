@@ -288,7 +288,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="08f-tB-FS5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pmN-PZ-5UL"/>
+                    <navigationItem key="navigationItem" id="pmN-PZ-5UL">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="kYa-mf-9bQ">
+                            <connections>
+                                <action selector="detailShare:" destination="oB8-mg-SaC" id="gqL-cm-fPA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblComputer" destination="WsJ-lX-d3V" id="QQ2-HP-Gnh"/>
                         <outlet property="lblHeading" destination="oR3-Rz-7uU" id="fyr-0w-6yn"/>

@@ -35,5 +35,27 @@ class DetailViewController: UIViewController {
         lblComputer.text = detailPart?.computer
     }
     
+    
+    @IBAction func detailShare(_ sender: Any) {
+        var text = ""
+                
+               
+        text.append(contentsOf: "\(detailPart?.catridge ?? "N/A")\n")
+        text.append(contentsOf: "\(detailPart?.computer ?? "N/A")\n")
+        text.append(contentsOf: "\(detailPart?.partNum ?? "N/A")\n")
+                
+                
+                // set up activity view controller
+                let textToShare = [ text ]
+                let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        //
+        //               // exclude some activity types from the list (optional)
+        //        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+
+                // present the view controller
+                self.present(activityViewController, animated: true, completion: nil)
+    }
+    
 
 }
