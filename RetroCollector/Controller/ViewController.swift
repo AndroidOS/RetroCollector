@@ -24,7 +24,12 @@ class ViewController: UIViewController {
 
 
 }
-
+    
+    
+    @IBAction func btnSignUp(_ sender: UIButton) {
+        
+    }
+    
     @IBAction func btnLogin(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? "") { [weak self] authResult, error in
           //guard let strongSelf = self else { return }
