@@ -27,7 +27,14 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnSignUp(_ sender: UIButton) {
-        
+        Auth.auth().createUser(withEmail: txtEmail.text ?? "", password: txtPassword.text ?? ""){ [weak self]  authResult, error in
+          //guard let strongSelf = self else { return }
+            if(error != nil){
+                self?.lblError.text = "\(error!)"
+            } else {
+                self?.performSegue(withIdentifier: "toList", sender: nil)
+            }
+        }
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
