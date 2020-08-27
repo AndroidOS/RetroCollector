@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D67F608E1AAD78D9A593D27 /* Pods_RetroCollectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375F9BEBABF432BC5F47BA3B /* Pods_RetroCollectorTests.framework */; };
 		826CB6BF733F09F24B8CA0E8 /* Pods_RetroCollector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */; };
+		BE6F362624F8572800FDA085 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F362524F8572800FDA085 /* PDFViewController.swift */; };
 		BE7206AF24E49CF5009B8B33 /* FirebaseDataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7206AE24E49CF5009B8B33 /* FirebaseDataMgr.swift */; };
 		BE769C5B24DA090200DA811A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE769C5A24DA090200DA811A /* GoogleService-Info.plist */; };
 		BE770ECD24E09FED0050DAE0 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE770ECC24E09FED0050DAE0 /* Part.swift */; };
@@ -41,6 +42,7 @@
 		4EB3517BEC236DB62F440485 /* Pods_RetroCollector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetroCollector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4E4E9B7F61BC2C9310EF5F /* Pods-RetroCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollector.release.xcconfig"; path = "Target Support Files/Pods-RetroCollector/Pods-RetroCollector.release.xcconfig"; sourceTree = "<group>"; };
 		943117BC0BFB70278E070960 /* Pods-RetroCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetroCollector.debug.xcconfig"; path = "Target Support Files/Pods-RetroCollector/Pods-RetroCollector.debug.xcconfig"; sourceTree = "<group>"; };
+		BE6F362524F8572800FDA085 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		BE7206AE24E49CF5009B8B33 /* FirebaseDataMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataMgr.swift; sourceTree = "<group>"; };
 		BE7206B024E49D3B009B8B33 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Utils/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE769C5A24DA090200DA811A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				BE7C0BFD24DB5FC8004F1144 /* ListViewController.swift */,
 				BE7DD28D24DDF4B5005A511F /* RetroTableViewCell.swift */,
 				BE77B8C824EDD68E00D00D8F /* DetailViewController.swift */,
+				BE6F362524F8572800FDA085 /* PDFViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				BE7206AF24E49CF5009B8B33 /* FirebaseDataMgr.swift in Sources */,
 				BE7AE3F324D8A6D800D357A9 /* AppDelegate.swift in Sources */,
 				BE770ECD24E09FED0050DAE0 /* Part.swift in Sources */,
+				BE6F362624F8572800FDA085 /* PDFViewController.swift in Sources */,
 				BE7DD28E24DDF4B5005A511F /* RetroTableViewCell.swift in Sources */,
 				BE7AE3FD24D8A6D800D357A9 /* RetroCollector.xcdatamodeld in Sources */,
 				BE7C0BFE24DB5FC8004F1144 /* ListViewController.swift in Sources */,

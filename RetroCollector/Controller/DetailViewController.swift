@@ -36,6 +36,11 @@ class DetailViewController: UIViewController {
     }
     
     
+    @IBAction func btnPdf(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showPDF", sender: nil)
+    }
+    
+    
     @IBAction func detailShare(_ sender: Any) {
         var text = ""
                 
@@ -54,6 +59,18 @@ class DetailViewController: UIViewController {
                 activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
        
                 self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showPDF") {
+            
+           print("showPDF Segue")
+            
+            if let detailViewController = segue.destination as? PDFViewController {
+                detailViewController.detailPart = detailPart
+                   }
+            
+        }
     }
     
 

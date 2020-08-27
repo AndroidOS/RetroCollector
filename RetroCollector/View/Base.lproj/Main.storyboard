@@ -289,11 +289,18 @@
                         <viewLayoutGuide key="safeArea" id="08f-tB-FS5"/>
                     </view>
                     <navigationItem key="navigationItem" id="pmN-PZ-5UL">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="kYa-mf-9bQ">
-                            <connections>
-                                <action selector="detailShare:" destination="oB8-mg-SaC" id="gqL-cm-fPA"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="kYa-mf-9bQ">
+                                <connections>
+                                    <action selector="detailShare:" destination="oB8-mg-SaC" id="gqL-cm-fPA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="PDF" id="9CQ-xp-yAh">
+                                <connections>
+                                    <action selector="btnPdf:" destination="oB8-mg-SaC" id="IHU-MN-rBs"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="lblComputer" destination="WsJ-lX-d3V" id="QQ2-HP-Gnh"/>
@@ -302,11 +309,28 @@
                         <outlet property="lblRarity" destination="0zo-ob-dHV" id="Hf8-SV-dXD"/>
                         <outlet property="lblRomUse" destination="H8A-lz-3Qx" id="zHc-3u-rwa"/>
                         <outlet property="lblYearMade" destination="8wb-tW-cle" id="IHJ-uS-8cl"/>
+                        <segue destination="UGU-DB-JQM" kind="show" identifier="showPDF" id="9cs-C0-CUJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhL-DZ-18c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2889.8550724637685" y="120.53571428571428"/>
+        </scene>
+        <!--PDF-->
+        <scene sceneID="3Xk-x4-Jnx">
+            <objects>
+                <viewController title="PDF" id="UGU-DB-JQM" customClass="PDFViewController" customModule="RetroCollector" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Rb-GP-nB9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Nh5-Fx-Ts9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hug-7e-sfc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9i-u3-clG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3699" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FiK-Jr-6s5">
@@ -328,7 +352,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6rH-au-Gf5"/>
         <segue reference="w2a-qq-t1e"/>
     </inferredMetricsTieBreakers>
     <resources>
