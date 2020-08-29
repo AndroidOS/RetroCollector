@@ -34,10 +34,20 @@ class PDFViewController: UIViewController {
         
         //pdfView.document = document
         
-        pdfView.document = PDFDocument(data: createPDF())
+        let pdfData = createPDF()
+        
+        pdfView.document = PDFDocument(data: pdfData)
         pdfView.autoScales = true
-
-        //print("\(detailPart)")
+        
+        let resourceDocPath = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
+        let pdfNameFromUrl = "RetroCollector - myPdf.pdf"
+        let actualPath = resourceDocPath.appendingPathComponent(pdfNameFromUrl)
+        do {
+            try pdfData.write(to: actualPath, options: .atomic)
+            print("pdf successfully saved!")
+        } catch {
+            print("Pdf could not be saved")
+        }
     }
     
     func createPDF1() {
