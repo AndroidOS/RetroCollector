@@ -326,7 +326,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Nh5-Fx-Ts9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hug-7e-sfc"/>
+                    <navigationItem key="navigationItem" id="hug-7e-sfc">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="fn5-la-4Tp">
+                            <connections>
+                                <action selector="btnSharePDF:" destination="UGU-DB-JQM" id="yej-CZ-AY7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9i-u3-clG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

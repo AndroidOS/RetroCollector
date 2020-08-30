@@ -112,19 +112,26 @@ class PDFViewController: UIViewController {
         // 5
         context.beginPage()
         // 6
+        let attribHead = [
+          NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 40)
+        ]
         let attributes = [
           NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)
         ]
         let cart = "Cartridge: \(detailPart?.catridge ?? "")\nComputer: \(detailPart?.computer ?? "") \n Part Number: \(detailPart?.partNum ?? "")"
         
+        let headIng = "Cartridge Details"
+        headIng.draw(at: CGPoint(x: 70, y: 0), withAttributes: attribHead)
         let text = "\(cart)"
-        text.draw(at: CGPoint(x: 0, y: 0), withAttributes: attributes)
+        text.draw(at: CGPoint(x: 10, y: 100), withAttributes: attributes)
       }
 
       return data
     }
     
 
+    @IBAction func btnSharePDF(_ sender: UIBarButtonItem) {
+    }
     /*
     // MARK: - Navigation
 
