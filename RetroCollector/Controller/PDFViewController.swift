@@ -131,6 +131,14 @@ class PDFViewController: UIViewController {
     
 
     @IBAction func btnSharePDF(_ sender: UIBarButtonItem) {
+        print("Share PDF pressed")
+        
+        var pdfURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
+               pdfURL = pdfURL.appendingPathComponent( "RetroCollector - myPdf.pdf") as URL
+        
+        let data = try! Data(contentsOf: pdfURL)
+
+        let docu = PDFDocument(data: data)
     }
     /*
     // MARK: - Navigation
