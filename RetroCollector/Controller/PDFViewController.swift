@@ -136,10 +136,38 @@ class PDFViewController: UIViewController {
         var pdfURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last! as URL
                pdfURL = pdfURL.appendingPathComponent( "RetroCollector - myPdf.pdf") as URL
         
-        let data = try! Data(contentsOf: pdfURL)
+        //let data = try! Data(contentsOf: pdfURL)
 
-        let docu = PDFDocument(data: data)
+        //let docu = PDFDocument(data: data)
+        
+        do {
+            //let data = try Data(contentsOf: pdfURL)
+
+            //try data.write(to: url as URL)
+
+            let activitycontroller = UIActivityViewController(activityItems: [pdfURL], applicationActivities: nil)
+            if activitycontroller.responds(to: #selector(getter: activitycontroller.completionWithItemsHandler))
+            {
+                activitycontroller.completionWithItemsHandler = {(type, isCompleted, items, error) in
+                    if isCompleted
+                    {
+                        print("completed")
+                    }
+                }
+            }
+
+            activitycontroller.excludedActivityTypes = [UIActivity.ActivityType.airDrop]
+            activitycontroller.popoverPresentationController?.sourceView = self.view
+            self.present(activitycontroller, animated: true, completion: nil)
+
+        }
+//        catch {
+//            //ERROR
+//        }
     }
+    
+    
+    
     /*
     // MARK: - Navigation
 
