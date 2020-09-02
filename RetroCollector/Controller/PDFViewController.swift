@@ -50,44 +50,7 @@ class PDFViewController: UIViewController {
         }
     }
     
-    func createPDF1() {
-        let documentsDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let filePath = (documentsDirectory as NSString).appendingPathComponent("foo.pdf") as String
-
-        let pdfTitle = "Swift-Generated PDF"
-        let pdfMetadata = [
-            // The name of the application creating the PDF.
-            kCGPDFContextCreator: "Your iOS App",
-
-            // The name of the PDF's author.
-            kCGPDFContextAuthor: "Foo Bar",
-
-            // The title of the PDF.
-            kCGPDFContextTitle: "Lorem Ipsum",
-
-            // Encrypts the document with the value as the owner password. Used to enable/disable different permissions.
-            kCGPDFContextOwnerPassword: "myPassword123"
-        ]
-
-        // Creates a new PDF file at the specified path.
-        UIGraphicsBeginPDFContextToFile(filePath, CGRect.zero, pdfMetadata)
-
-        // Creates a new page in the current PDF context.
-        UIGraphicsBeginPDFPage()
-
-        // Default size of the page is 612x72.
-        let pageSize = UIGraphicsGetPDFContextBounds().size
-        let font = UIFont.preferredFont(forTextStyle: .largeTitle)
-
-        // Let's draw the title of the PDF on top of the page.
-        let attributedPDFTitle = NSAttributedString(string: pdfTitle, attributes: [NSAttributedString.Key.font: font])
-        let stringSize = attributedPDFTitle.size()
-        let stringRect = CGRect(x: (pageSize.width / 2 - stringSize.width / 2), y: 20, width: stringSize.width, height: stringSize.height)
-        attributedPDFTitle.draw(in: stringRect)
-
-        // Closes the current PDF context and ends writing to the file.
-        UIGraphicsEndPDFContext()
-    }
+    
     
     func createPDF() -> Data {
       // 1
@@ -161,21 +124,8 @@ class PDFViewController: UIViewController {
             self.present(activitycontroller, animated: true, completion: nil)
 
         }
-//        catch {
-//            //ERROR
-//        }
+
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }

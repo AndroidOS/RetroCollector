@@ -15,3 +15,7 @@ target 'RetroCollector' do
   end
 
 end
+
+"dependencies": {
+  "lodash": ">=4.17.19"
+}
